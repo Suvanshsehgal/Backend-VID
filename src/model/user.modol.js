@@ -59,9 +59,9 @@ userSchema.methods.generateAcesssToken = function() {
         username: this.username,
         email: this.email
     }, process.env.JWT_SECRET, {
-        expiresIn: "1" // Token expires in 1 hour
+        expiresIn: "1" 
     })
-} // Generate access token for the user
+} 
 
 userSchema.methods.generateRefreshToken = function() {
  return jwt.sign({
